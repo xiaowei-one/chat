@@ -1,17 +1,16 @@
-<template>
-  <view>
-    <text class="title">{{ title }}</text>
-  </view>
-</template>
-
 <script setup lang="ts">
 import { ref } from 'vue'
-const title = ref('Hello')
+import Tabbar from '@/components/Tabbar'
+import ContactsItem from './components/contactsItem'
+
 </script>
 
-<style>
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<template>
+  <view>
+    <van-nav-bar title="动心" />
+    <ContactsItem />
+    <ContactsItem />
+    <ContactsItem />
+  </view>
+  <Tabbar />
+</template>
