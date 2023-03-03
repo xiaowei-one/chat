@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { onLoad } from "@dcloudio/uni-app";
-// import { Tabbar, TabbarItem } from 'vant'
 
 const active = ref('home')
 function tabbarChange(path){
@@ -13,7 +12,6 @@ function tabbarChange(path){
 }
 
 onLoad(({ path }) => {
-  console.log(path)
   if (path) {
     active.value = path
   }

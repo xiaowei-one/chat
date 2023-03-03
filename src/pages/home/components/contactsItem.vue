@@ -1,15 +1,23 @@
-<script>
+<script setup lang="ts">
+import { defineProps } from 'vue'
+
+const props = defineProps({
+  contactImg: String,
+  date: String,
+  lastMessage: String,
+  name: String,
+})
 
 </script>
 <template>
   <view class="person-item">
-    <image src="/static/image/head.png" />
+    <image :src="props.contactImg" />
     <view class="person-info">
       <view class="person-top">
-        <text>无双剑姬</text>
-        <text class="text-color-disable font-size-sm">2022-12-22</text>
+        <text>{{ props.name }}</text>
+        <text class="text-color-disable font-size-sm">{{ props.date }}</text>
       </view>
-      <text class="text-color-grey font-size-base">我是无双王者</text>
+      <text class="text-color-grey font-size-base">{{ props.lastMessage }}</text>
     </view>
   </view>
 </template>
@@ -18,7 +26,7 @@
 .person-item {
   display: flex;
   align-items: center;
-  padding: 20rpx;
+  padding: 20rpx 40rpx 20rpx 20rpx;
   border-bottom: 1px solid var(--uni-bg-color-grey);
 }
 

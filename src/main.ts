@@ -5,6 +5,7 @@ import {
   TabbarItem,
   NavBar,
   Image as VanImage,
+  Empty,
 } from 'vant';
 import 'vant/lib/index.css';
 import './style.css';
@@ -15,6 +16,7 @@ export function createApp() {
   app.use(TabbarItem);
   app.use(NavBar);
   app.use(VanImage);
+  app.use(Empty);
   return {
     app,
   };
